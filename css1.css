@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(42, 42, 42);
+}
+
+.kotak_galeri{
+    width: 600px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -8%;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+.kotak_galeri .gambar{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateX(-20px);
+}
+
+.kotak_galeri .aktif{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.back{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/tombol.png);
+    background-size: cover;
+    margin: 15px;
+    transition: 0.5s ease-out;
+    position: relative;
+    top: -8%;
+    filter:brightness(150%);
+}
+.back:hover{
+    transform: scale(1.15);
+    filter: brightness(200%);
+}
+.next{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/tombol.png);
+    background-size: cover;
+    transform: rotate(180deg);
+    margin: 15px;
+    transition: 0.5s ease-out;
+    top: -8%;
+    position: relative;
+    filter:brightness(150%);
+}
+.next:hover{
+    transform: scale(1.15) rotate(180deg);
+    filter: brightness(200%);
+}
+
+.thumbnail{
+    width: 500px;
+    height: 75px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 82%;
+    border-radius: 15px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
